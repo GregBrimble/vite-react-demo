@@ -1,0 +1,57 @@
+{
+	"name": "vite-react-demo",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "npx vite build",
+		"check": "npx concurrently -g \"npm:*:check\"",
+		"predeploy": "npm run build",
+		"deploy": "npx wrangler deploy",
+		"dev": "open http://localhost:5173/ && npx concurrently \"npm:dev:vite\" --restart-tries=-1",
+		"dev:vite": "npx vite",
+		"predev:wrangler": "npm run build",
+		"dev:wrangler": "npx wrangler dev",
+		"eslint": "npx eslint .",
+		"format:check": "npm run prettier -- --check",
+		"format:fix": "npm run prettier -- --write",
+		"lint:check": "npm run eslint",
+		"lint:fix": "npm run eslint -- --fix",
+		"prettier": "npx prettier .",
+		"types:check": "npx tsc --build",
+		"types:generate": "npx wrangler types --experimental-include-runtime"
+	},
+	"prettier": {
+		"plugins": [
+			"prettier-plugin-organize-imports",
+			"prettier-plugin-packagejson",
+			"prettier-plugin-sort-json"
+		]
+	},
+	"dependencies": {
+		"react": "19.0.0",
+		"react-dom": "19.0.0"
+	},
+	"devDependencies": {
+		"@cloudflare/vite-plugin": "0.1.10",
+		"@cloudflare/workers-types": "4.20250311.0",
+		"@eslint/js": "9.22.0",
+		"@types/react": "19.0.10",
+		"@types/react-dom": "19.0.4",
+		"@vitejs/plugin-react": "4.3.4",
+		"concurrently": "^9.1.2",
+		"eslint": "9.22.0",
+		"eslint-plugin-react": "7.37.4",
+		"eslint-plugin-react-hooks": "5.2.0",
+		"eslint-plugin-react-refresh": "0.4.19",
+		"globals": "16.0.0",
+		"jiti": "2.4.2",
+		"prettier": "3.5.3",
+		"prettier-plugin-organize-imports": "4.1.0",
+		"prettier-plugin-packagejson": "2.5.10",
+		"prettier-plugin-sort-json": "4.1.1",
+		"typescript": "~5.8.2",
+		"typescript-eslint": "8.26.1",
+		"vite": "6.2.1",
+		"wrangler": "3.114.1"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"name": "vite-react-demo",
+	"main": "./api/index.ts",
+	"compatibility_date": "2025-03-11",
+	"assets": {
+		"not_found_handling": "single-page-application",
+		"binding": "ASSETS",
+	},
+	"observability": {
+		"enabled": true,
+	},
+}

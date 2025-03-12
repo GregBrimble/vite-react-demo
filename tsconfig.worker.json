@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"erasableSyntaxOnly": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"lib": ["ESNext"],
+		"module": "Preserve",
+		"moduleDetection": "force",
+		"noEmit": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noUncheckedIndexedAccess": true,
+		"noUncheckedSideEffectImports": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "ESNext",
+		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.worker.tsbuildinfo",
+		"types": [
+			"./.wrangler/types/runtime.d.ts",
+			"./worker-configuration.d.ts",
+			"vite/client"
+		],
+		"useDefineForClassFields": true,
+		"verbatimModuleSyntax": true
+	},
+	"include": ["./api/**/*"]
+}
