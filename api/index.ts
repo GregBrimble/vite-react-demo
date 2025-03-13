@@ -10,6 +10,15 @@ export default class extends WorkerEntrypoint<Env> {
 			});
 		}
 
+		if (url.pathname === "/connect") {
+			const id = this.env.COUNTER.idFromName("homepage-counter");
+			const stub = this.env.COUNTER.get(id);
+
+			return stub.fetch(request);
+		}
+
 		return this.env.ASSETS.fetch(request);
 	}
 }
+
+export { Counter } from "./Counter";

@@ -9,4 +9,13 @@
 	"observability": {
 		"enabled": true,
 	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_sqlite_classes": ["Counter"],
+		},
+	],
+	"durable_objects": {
+		"bindings": [{ "class_name": "Counter", "name": "COUNTER" }],
+	},
 }
